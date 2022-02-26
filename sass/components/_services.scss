@@ -1,0 +1,42 @@
+.services {
+  padding-top: 7rem;
+  text-align: center;
+  padding-bottom: 5rem;
+  &__text {
+    width: 62rem;
+    margin: 0 auto;
+  }
+  &__card {
+    margin-top: 6rem;
+    display: flex;
+    @include respond(tab-lands) {
+      margin-top: 2rem;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+.card {
+  border: 2px solid $color--primary;
+  padding: 3rem;
+  margin: 0 2rem;
+  width: 30%;
+  @include respond(tab-lands) {
+    margin: 3rem 0;
+    width: 100%;
+    max-width: 45rem;
+    padding: 5rem 3rem;
+  }
+
+  &__img {
+    width: 10rem;
+    height: 12rem;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 0.8rem;
+  }
+  & p {
+    font-size: 1.4rem;
+  }
+}

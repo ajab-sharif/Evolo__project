@@ -1,0 +1,44 @@
+.details {
+  padding: 5rem 0;
+  &__content {
+    display: flex;
+    @include respond(tab-lands) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+  &__text--content {
+    padding-left: 5rem;
+    padding-top: 10rem;
+    width: 50%;
+    @include respond(tab-lands) {
+      padding: 4rem 1rem;
+      width: 100%;
+      order: -1;
+    }
+  }
+  &__img--content {
+    width: 50%;
+    padding: 1rem 2rem;
+    @include respond(tab-lands) {
+      width: 100%;
+      padding: 3rem 2rem;
+    }
+  }
+  &__list {
+    & .fas {
+      color: $color--primary;
+      margin-bottom: 1.2rem;
+    }
+    & li {
+      display: flex;
+      margin: 1rem;
+      align-items: center;
+      & span {
+        margin-left: 2.5rem;
+      }
+    }
+  }
+}

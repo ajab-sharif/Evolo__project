@@ -12,6 +12,10 @@ Colors:
   margin-bottom: 2.8rem;
 }
 
+.mb-sm {
+  margin-bottom: 1.2rem;
+}
+
 .headding--primary {
   font-size: 4.3rem;
   line-height: 1.2;
@@ -20,6 +24,16 @@ Colors:
 .headding--primary .headding--first {
   display: block;
   color: #00bfd8;
+}
+
+.headding--secondary {
+  text-transform: capitalize;
+  font-size: 4rem;
+  line-height: 1.2;
+}
+
+.headding--tertiary {
+  font-size: 2.3rem;
 }
 
 * {
@@ -169,6 +183,102 @@ h6 {
   border: 2px solid #00bfd8;
   color: #00bfd8;
   background: #ffffff;
+}
+
+.services {
+  padding-top: 7rem;
+  text-align: center;
+  padding-bottom: 5rem;
+}
+.services__text {
+  width: 62rem;
+  margin: 0 auto;
+}
+.services__card {
+  margin-top: 6rem;
+  display: flex;
+}
+@media only screen and (max-width: 66.875em) {
+  .services__card {
+    margin-top: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.card {
+  border: 2px solid #00bfd8;
+  padding: 3rem;
+  margin: 0 2rem;
+  width: 30%;
+}
+@media only screen and (max-width: 66.875em) {
+  .card {
+    margin: 3rem 0;
+    width: 100%;
+    max-width: 45rem;
+    padding: 5rem 3rem;
+  }
+}
+.card__img {
+  width: 10rem;
+  height: 12rem;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 0.8rem;
+}
+.card p {
+  font-size: 1.4rem;
+}
+
+.details {
+  padding: 5rem 0;
+}
+.details__content {
+  display: flex;
+}
+@media only screen and (max-width: 66.875em) {
+  .details__content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+.details__text--content {
+  padding-left: 5rem;
+  padding-top: 10rem;
+  width: 50%;
+}
+@media only screen and (max-width: 66.875em) {
+  .details__text--content {
+    padding: 4rem 1rem;
+    width: 100%;
+    order: -1;
+  }
+}
+.details__img--content {
+  width: 50%;
+  padding: 1rem 2rem;
+}
+@media only screen and (max-width: 66.875em) {
+  .details__img--content {
+    width: 100%;
+    padding: 3rem 2rem;
+  }
+}
+.details__list .fas {
+  color: #00bfd8;
+  margin-bottom: 1.2rem;
+}
+.details__list li {
+  display: flex;
+  margin: 1rem;
+  align-items: center;
+}
+.details__list li span {
+  margin-left: 2.5rem;
 }
 
 .header {
