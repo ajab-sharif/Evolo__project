@@ -1,1 +1,47 @@
- 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  display: block;
+  position: absolute;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  line-height: 1.7;
+  font-family: "Raleway", sans-serif;
+}
+.container {
+  width: 100%;
+  max-width: 114rem;
+  margin: 0 auto;
+  @include respond(container) {
+    width: 85%;
+  }
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+.x {
+  height: 100vh;
+  background: greenyellow;
+}

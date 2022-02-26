@@ -1,1 +1,23 @@
+@mixin btn {
+  border: none;
+  outline: none;
+  font-weight: 700;
+  display: inline-block;
+}
 
+//////////// responsive meneger////////////////////
+
+@mixin respond($breakpoint) {
+  @if $breakpoint ==tab-lands {
+    // 1070px == 65.625em;
+    @media only screen and (max-width: 66.875em) {
+      @content;
+    }
+  }
+  @if $breakpoint ==container {
+    // 1200px  == ;
+    @media only screen and (max-width: 75em) {
+      @content;
+    }
+  }
+}

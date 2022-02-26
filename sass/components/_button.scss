@@ -1,0 +1,15 @@
+.btn--primary {
+  @include btn;
+  padding: 2.2rem 4.2rem;
+  border-radius: 5rem;
+  background: $color--primary;
+  color: $color--light;
+  transition: all 0.2s ease-in;
+  font: 700 0.75em/0 "Raleway", sans-serif;
+  border: 2px solid $color--primary;
+  &:hover {
+    border: 2px solid $color--primary;
+    color: $color--primary;
+    background: $color--light;
+  }
+}
