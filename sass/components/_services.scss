@@ -2,10 +2,6 @@
   padding-top: 7rem;
   text-align: center;
   padding-bottom: 5rem;
-  &__text {
-    max-width: 62rem;
-    margin: 0 auto;
-  }
   &__card {
     margin-top: 6rem;
     display: flex;
@@ -18,7 +14,7 @@
   }
 }
 .card {
-  border: 2px solid $color--primary;
+  border: 1px solid $color--primary;
   padding: 3rem;
   margin: 0 2rem;
   width: 30%;
