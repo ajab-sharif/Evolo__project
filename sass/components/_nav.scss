@@ -9,7 +9,6 @@
   width: 100%;
   transition: all 0.2s ease-in;
   z-index: 36;
-  background-color: rgba($color--light, 1);
   @include respond(tab-lands) {
     padding: 2rem;
   }

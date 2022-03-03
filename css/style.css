@@ -120,7 +120,6 @@ h6 {
   width: 100%;
   transition: all 0.2s ease-in;
   z-index: 36;
-  background-color: white;
 }
 @media only screen and (max-width: 66.875em) {
   .nav {
