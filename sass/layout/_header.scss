@@ -3,7 +3,7 @@
   background-image: url(../images/header-background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-position: 100% 100%;
 
   @include respond(tab-lands) {
     background: $color--light;

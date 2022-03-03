@@ -28,11 +28,10 @@
         <div class="nav__content">
             <ul class="nav__list">
                 <li class="nav__item"><a href="#" class="nav__link sticky__active nav__active">home</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">services</a></li>
+                <li class="nav__item"><a href="#service" class="nav__link">services</a></li>
                 <li class="nav__item"><a href="#" class="nav__link">pricing</a></li>
                 <li class="nav__item"><a href="#" class="nav__link">request</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">about</a>
-                </li>
+                <li class="nav__item"><a href="#" class="nav__link">about</a></li>
                 <li class="nav__item"><a href="#" class="nav__link">contact</a></li>
             </ul>
             <span class="nav__social--icons">
@@ -49,9 +48,23 @@
                     </a>
                 </span>
             </span>
+            <input class="nav__radio" type="checkbox" id="target" name="name" />
+            <label class="nav__mobile" for="target">
+                <span class="nav__menu"></span>
+            </label>
         </div>
         <!-- nav end..-->
     </nav>
+    <div class="mobile__nav">
+        <ul class="mobile__nav--container nav--close">
+            <li><a href="#" class="nav__active">home</a></li>
+            <li><a href="#service">services</a></li>
+            <li><a href="#">pricing</a></li>
+            <li><a href="#">request</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">contact</a></li>
+        </ul>
+    </div>
     <!--header start -->
     <header class="header">
         <div class="container">
@@ -72,7 +85,7 @@
         </div>
     </header>
     <!--header end -->
-    <section class="services">
+    <section class="services" id="service">
         <div class="container">
             <div class="services__content">
                 <h2 class="headding--secondary mb-md">business Growth services</h2>
@@ -199,16 +212,16 @@
                         </li>
 
                     </ul>
-                    <a href="#" class="btn--primary pricing--light--btn">BUY NOW</a>
+                    <a href="#" class="btn--primary pricing--light--btn">REQUEST</a>
 
                 </div>
                 <!-- card 2-->
                 <div class="pricing__card">
-                    <p class="pricing__card--title">STARTER</p>
-                    <p class="pricing__card--sub--text">Just see what can be achieved</p>
+                    <p class="pricing__card--title">MEDIUM</p>
+                    <p class="pricing__card--sub--text">Very appropriate for the short term</p>
                     <hr class="pricing__divide--hr">
                     <div class="pricing__card--price--body">
-                        <span>$</span><span>199</span>
+                        <span>$</span><span>299</span>
                         <p>monthly</p>
                     </div>
                     <hr class="pricing__divide--hr">
@@ -222,11 +235,11 @@
                             <span>User And Admin Rights Control</span>
                         </li>
                         <li>
-                            <i class=" fas fa-times"></i>
+                            <i class=" fas fa-check"></i>
                             <span>List Building And Cleaning</span>
                         </li>
                         <li>
-                            <i class=" fas fa-times"></i>
+                            <i class=" fas fa-check"></i>
                             <span>Collected Data Management</span>
                         </li>
                         <li>
@@ -235,15 +248,18 @@
                         </li>
 
                     </ul>
-                    <a href="#" class="btn--primary pricing--light--btn">BUY NOW</a>
+                    <a href="#" class="btn--primary pricing--light--btn">REQUEST</a>
                 </div>
                 <!-- card 3-->
                 <div class="pricing__card">
-                    <p class="pricing__card--title">STARTER</p>
+                    <div class="pricing__card--corner">
+                        <p>best value</p>
+                    </div>
+                    <p class="pricing__card--title">COMPLETE</p>
                     <p class="pricing__card--sub--text">Just see what can be achieved</p>
                     <hr class="pricing__divide--hr">
                     <div class="pricing__card--price--body">
-                        <span>$</span><span>199</span>
+                        <span>$</span><span>399</span>
                         <p>monthly</p>
                     </div>
                     <hr class="pricing__divide--hr">
@@ -257,20 +273,20 @@
                             <span>User And Admin Rights Control</span>
                         </li>
                         <li>
-                            <i class=" fas fa-times"></i>
+                            <i class=" fas fa-check"></i>
                             <span>List Building And Cleaning</span>
                         </li>
                         <li>
-                            <i class=" fas fa-times"></i>
+                            <i class=" fas fa-check"></i>
                             <span>Collected Data Management</span>
                         </li>
                         <li>
-                            <i class=" fas fa-times"></i>
+                            <i class=" fas fa-check"></i>
                             <span>More Planning And Evaluation</span>
                         </li>
 
                     </ul>
-                    <a href="#" class="btn--primary pricing--light--btn">BUY NOW</a>
+                    <a href="#" class="btn--primary pricing--light--btn">REQUEST</a>
                 </div>
 
             </div>

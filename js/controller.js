@@ -10,5 +10,8 @@ window.addEventListener('scroll', function (e) {
 
 /////////////////// after ES6 ////////
 
-
-
+const navMobileList = document.querySelector('.mobile__nav--container');
+document.querySelector('.nav__mobile').addEventListener('click', function () {
+    navMobileList.classList.toggle('nav--close')
+    navMobileList.classList.toggle('nav--open')
+});

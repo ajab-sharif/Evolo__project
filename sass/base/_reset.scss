@@ -12,9 +12,6 @@
 }
 html {
   font-size: 62.5%;
-  @include respond(tab) {
-    font-size: 50%;
-  }
 }
 body {
   font-size: 1.6rem;
@@ -27,7 +24,7 @@ body {
   max-width: 114rem;
   margin: 0 auto;
   @include respond(container) {
-    width: 85%;
+    width: 95%;
   }
 }
 a {

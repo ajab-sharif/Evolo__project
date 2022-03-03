@@ -3,13 +3,15 @@
   top: 0;
   left: 0;
   justify-content: space-between;
-  align-content: center;
+  align-items: center;
   padding: 4rem 6rem;
   position: fixed;
   width: 100%;
   transition: all 0.2s ease-in;
-  @include respond(tab) {
-    padding: 2rem 3rem;
+  z-index: 36;
+  background-color: rgba($color--light, 1);
+  @include respond(tab-lands) {
+    padding: 2rem;
   }
   & img {
     height: 3.5rem;
@@ -53,15 +55,91 @@
       color: $color--light;
       margin-left: 1rem;
     }
+    @include respond(tab-lands) {
+      display: none;
+    }
+  }
+  &__mobile {
+    display: flex;
+    width: 3.5rem;
+    height: 3.5rem;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0;
+    display: none;
+    @include respond(tab-lands) {
+      opacity: 1;
+      display: block;
+    }
+  }
+  &__radio {
+    display: none;
+  }
+  &__radio:checked ~ .mobile__nav .mobile__nav--container {
+    transform: translateY(0px);
+  }
+  &__menu {
+    transform: translateY(-50%);
+    margin-top: 50%;
+    align-self: center;
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 5px;
+    background: $color--dark;
+    border-radius: 1rem;
+    transition: all 0.2s ease-in;
+  }
+  &__menu::after {
+    content: "";
+    transition: all 0.2s ease-in;
+    border-radius: 1rem;
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+    background: $color--dark;
+    display: block;
+    width: 100%;
+    height: 5px;
+  }
+
+  &__menu::before {
+    content: "";
+    transition: all 0.2s ease-in;
+    border-radius: 1rem;
+    position: absolute;
+    left: 0;
+    background: $color--dark;
+    display: block;
+    top: -1rem;
+    width: 100%;
+    height: 5px;
+  }
+
+  &__radio:checked ~ &__mobile &__menu::after {
+    bottom: 0;
+    transform: rotate(135deg);
+    background: $color--dark;
+  }
+  &__radio:checked ~ &__mobile &__menu {
+    background: transparent;
+  }
+
+  &__radio:checked ~ &__mobile &__menu::before {
+    top: 0;
+    transform: rotate(-135deg);
+    background: $color--dark;
   }
 }
+
 .nav__active {
   opacity: 1 !important;
 }
 .sticky {
-  background: rgba($color--light, 0.8);
-  height: 2rem;
-  padding: 3rem 6rem;
+  z-index: 36;
+  background: rgba($color--light, 1);
+  padding: 2rem 6rem;
   align-items: center;
   transition: all 0.3s ease-in;
   box-shadow: 0 0 5rem 1px rgba($color--dark, 0.5);
@@ -75,6 +153,58 @@
     color: $color--primary !important;
   }
   @include respond(tab) {
-    padding: 2rem 3rem;
+    padding: 2rem;
+    box-shadow: none;
   }
+  @include respond(tab-lands) {
+    box-shadow: none;
+  }
+}
+.nav__radio:checked ~ .mobile__nav .mobile__nav--container {
+  transform: translateX(0);
+}
+.mobile {
+  background: 100vw;
+  &__nav {
+    & ul {
+      display: none;
+      opacity: 0;
+      transition: transform 0.5s ease-in, box-shadow 0.1s ease-in 0.3s;
+      padding-left: 2rem;
+      width: 100vw;
+      padding-top: 4.5rem;
+      margin-top: 4rem;
+      padding-bottom: 3rem;
+      background: $color--light;
+      position: fixed;
+      box-shadow: 0 0 5rem 1px rgba($color--dark, 0.5);
+      z-index: 35;
+      @include respond(tab-lands) {
+        opacity: 1;
+        display: block;
+      }
+    }
+    & ul li {
+      padding: 3px 1rem;
+    }
+    & ul li a {
+      font-size: 1.7rem;
+      color: $color--dark;
+      text-transform: capitalize;
+      font-weight: 600;
+      transition: color 0.2s ease-in;
+      opacity: 0.7;
+      z-index: 111;
+      &:hover {
+        opacity: 1 !important;
+      }
+    }
+  }
+}
+.nav--open {
+  transform: translateY(0);
+}
+
+.nav--close {
+  transform: translateY(-100%);
 }
