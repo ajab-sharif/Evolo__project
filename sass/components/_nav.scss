@@ -158,6 +158,7 @@
   }
   @include respond(tab-lands) {
     box-shadow: none;
+    padding: 2rem;
   }
 }
 .nav__radio:checked ~ .mobile__nav .mobile__nav--container {

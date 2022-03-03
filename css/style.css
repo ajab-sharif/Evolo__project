@@ -277,6 +277,7 @@ h6 {
 @media only screen and (max-width: 66.875em) {
   .sticky {
     box-shadow: none;
+    padding: 2rem;
   }
 }
 
