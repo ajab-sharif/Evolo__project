@@ -1,0 +1,22 @@
+.video {
+  padding: 10rem 0;
+  &__content {
+    width: 80rem;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    & p {
+      margin: 0 auto;
+      text-align: center;
+      width: 70rem;
+    }
+  }
+  &__playBtn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 3rem solid transparent;
+    border-left-color: $color--light;
+    border-right: none;
+  }
+}

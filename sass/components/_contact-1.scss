@@ -1,0 +1,27 @@
+.contact-1 {
+  padding: 10rem 0;
+  background: $color--gray--light;
+  &__content {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2%;
+    @include respond(tab-lands) {
+      grid-template-columns: 1fr;
+      max-width: 65rem;
+    }
+  }
+  &__left {
+    & span {
+      font-size: 1.3rem;
+    }
+    & i {
+      margin-right: 2rem;
+    }
+    & strong {
+      margin-right: 2px;
+      font-size: 1.5rem;
+    }
+  }
+}
