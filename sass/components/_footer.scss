@@ -1,0 +1,61 @@
+.footer {
+  &__content {
+    font-size: 1.4rem;
+    padding: 5rem 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3.4rem;
+    justify-content: center;
+    align-content: center;
+    @include respond(tab) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__middle {
+    & ul li {
+      margin-left: 1.5rem;
+      position: relative;
+      & a {
+        text-decoration: underline;
+        color: $color--primary;
+      }
+    }
+    & ul li::before {
+      padding: absolute;
+      top: 50%;
+      left: -1.5rem;
+      transform: translateY(-50%);
+      width: 6px;
+      height: 6px;
+      display: block;
+      content: "";
+      background-color: $color--primary;
+    }
+  }
+  &__icon--box {
+    & a {
+      position: relative;
+      display: inline-block;
+      &:not(:first-child) {
+        margin-left: 4rem;
+      }
+      & .fa-stack-2x {
+        color: $color--secondary;
+        transform: scale(1.3);
+      }
+      & .fa-stack-1x {
+        transform: scale(1.5);
+        color: $color--light;
+        margin-left: 1.1rem;
+      }
+    }
+  }
+  &__copy--text {
+    border-top: 1px solid $color--gray;
+    padding: 1.2rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: $color--gray;
+    text-align: center;
+  }
+}

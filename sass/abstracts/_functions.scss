@@ -1,0 +1,12 @@
+@keyframes ring {
+  0% {
+    width: 4rem;
+    height: 4rem;
+    opacity: 1;
+  }
+  100% {
+    width: 15rem;
+    height: 15rem;
+    opacity: 0;
+  }
+}

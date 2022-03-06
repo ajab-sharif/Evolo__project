@@ -1,22 +1,49 @@
 .video {
   padding: 10rem 0;
   &__content {
-    width: 80rem;
+    max-width: 80rem;
     margin: 0 auto;
     text-align: center;
     position: relative;
     & p {
       margin: 0 auto;
       text-align: center;
-      width: 70rem;
+      max-width: 70rem;
     }
   }
   &__playBtn {
-    position: absolute;
     top: 50%;
     left: 50%;
-    border: 3rem solid transparent;
-    border-left-color: $color--light;
-    border-right: none;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    position: absolute;
+    width: 9rem;
+    height: 9rem;
+    background: $color--primary;
+    border-radius: 50rem;
+  }
+  &__playBtn::before {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-12%, -50%);
+    content: "";
+    z-index: 1;
+    border-left: 3rem solid $color--light;
+    border-top: 3rem solid transparent;
+    border-bottom: 3rem solid transparent;
+  }
+  &__playBtn::after {
+    content: "";
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    position: absolute;
+    background-color: $color--primary;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
   }
 }
